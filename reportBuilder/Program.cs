@@ -11,6 +11,9 @@ using CsvHelper.Configuration;
 using System.Globalization;
 using reportBuilder.classes;
 using System.Linq;
+using System.Text.RegularExpressions;
+using Microsoft.Extensions.Configuration.Json;
+using Microsoft.Extensions.Configuration;
 
 namespace reportBuilder
 {
@@ -62,12 +65,42 @@ namespace reportBuilder
             return string.Empty;
         }
 
-        public static void Main(string[] args)
+        public static string GetConnectionString()
         {
-            
+            var configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .Build();
+
+            return configuration.GetConnectionString("DefaultConnection");
+        }
+
+        public static void ClearUpTable(string connectionString, string tableName)
+        {
+            string query = $"delete from {tableName} where task_no is not null";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                   int affectedRows = cmd.ExecuteNonQuery();
+                   Console.WriteLine($"\nCleared up {affectedRows} rows");
+                }
+            }
+        }
+
+        public static void Main(string[] args)
+        {          
+
             var filename = ShowDialog();
             Console.WriteLine("Connecting to the database....");
-            string connectionString = "Server=localhost;Database=ReportBuilderRU;User=sa;Password=Cyxariki_2404;Encrypt=True;TrustServerCertificate=True;";
+            string connectionString = GetConnectionString();
+            Console.Write("Complete!");
+            string tableName = "ReportData";
+            Console.Write("Clearing up your database....");
+            ClearUpTable(connectionString, tableName);
+
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
                 Delimiter = ";",
@@ -132,9 +165,22 @@ namespace reportBuilder
             return errorTypeDictionary;            
         }
 
+        public static string NormalizeErrorType(string errorType)
+        {
+            Match match = Regex.Match(errorType, @"[A-Z]+-\d+");
+
+            if (match.Success)
+            {
+                return match.Value;
+            }
+            string result = Regex.Replace(errorType, @"\s *\(.*?\)\s*", "");
+            return result.Trim();
+        }
+
+
         public static void compareData(string connectionString)
         {
-            string dictionaryPath = @"C:\Users\avglushkov\Desktop\автоматизация\dictionary.csv";
+            string dictionaryPath = ShowDialog();
             Dictionary<string, string> categorizedReportData =  createErrorTypeDictionary(dictionaryPath);
 
             string query = @"select error_type, short_desc from ReportData";
@@ -154,7 +200,9 @@ namespace reportBuilder
                             string errorType = reader["error_type"] as string;
                             string shortDesc = reader["short_desc"] as string;
 
-                            string comparisonKey = !string.IsNullOrEmpty(errorType) ? errorType : shortDesc;
+                            string normalizedErrorType = NormalizeErrorType(errorType);
+                            string normalizedDesc = NormalizeErrorType(shortDesc);
+                            string comparisonKey = !string.IsNullOrEmpty(normalizedErrorType) ? normalizedErrorType : normalizedDesc;
 
                             if (categorizedReportData.TryGetValue(comparisonKey, out string desc))
                             {

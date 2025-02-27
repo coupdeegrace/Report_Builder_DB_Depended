@@ -234,11 +234,12 @@ namespace reportBuilder
                     }
                 }
             }
-           
-            foreach (var kvp in errorTypeCounts)
-            {
-                Console.WriteLine($"Description: {kvp.Key}, Count: {kvp.Value}");
-            }
+            string credentialsPath = "";
+            string spreadsheetId = "";
+
+            GoogleSheetsService googleSheetsService = new GoogleSheetsService(credentialsPath, spreadsheetId);
+
+            googleSheetsService.InserData(errorTypeCounts);
         }
     }
 }

@@ -22,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -53,7 +49,7 @@
               "RelativeDocumentMoniker": "reportBuilder\\classes\\ReportClass.cs",
               "ToolTip": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\ReportClass.cs",
               "RelativeToolTip": "reportBuilder\\classes\\ReportClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T18:00:14.969Z",
               "EditorCaption": ""
@@ -66,7 +62,7 @@
               "RelativeDocumentMoniker": "reportBuilder\\Program.cs",
               "ToolTip": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\Program.cs",
               "RelativeToolTip": "reportBuilder\\Program.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAADwv1gAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAASwMQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T13:51:34.008Z",
               "EditorCaption": ""

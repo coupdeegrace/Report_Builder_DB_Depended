@@ -44,6 +44,7 @@ namespace reportBuilder
         public int dwReserved;
         public int flagsEx;
     }
+   
 
     public class Program
     {
@@ -91,12 +92,12 @@ namespace reportBuilder
         }
 
         public static void Main(string[] args)
-        {          
-
+        {
             var filename = ShowDialog();
             Console.WriteLine("Connecting to the database....");
             string connectionString = GetConnectionString();
             Console.Write("Complete!");
+
             string tableName = "ReportData";
             Console.Write("Clearing up your database....");
             ClearUpTable(connectionString, tableName);
@@ -156,7 +157,11 @@ namespace reportBuilder
                 {
                     foreach (var record in records)
                     {
-                        errorTypeDictionary[record.errorType] = record.specification;
+                        Match match = Regex.Match(record.errorType, @"[A-Z]+-\d+");
+                        if (match.Success)                        
+                            errorTypeDictionary[record.errorType] = record.specification;
+                        else 
+                            errorTypeDictionary[record.errorType.ToLower()] = record.specification;
                     }
                 }
                 catch (Exception ex) { Console.WriteLine(ex);}             
@@ -174,12 +179,18 @@ namespace reportBuilder
                 return match.Value;
             }
             string result = Regex.Replace(errorType, @"\s *\(.*?\)\s*", "");
-            return result.Trim();
+            return result.Trim().ToLower();
         }
 
+        public static string NoramlizeShortDesc(string shortDesc)
+        {
+            string result = Regex.Replace(shortDesc, @"\s *\(.*?\)\s*", "");
+            return result.Trim().ToLower();
+        }
 
         public static void compareData(string connectionString)
         {
+            Console.WriteLine("Please, select your dictionary....");
             string dictionaryPath = ShowDialog();
             Dictionary<string, string> categorizedReportData =  createErrorTypeDictionary(dictionaryPath);
 
@@ -195,13 +206,14 @@ namespace reportBuilder
                 {
                     using (SqlDataReader reader = cmd.ExecuteReader()) 
                     {
+                        int taskAmount = 0;
                         while (reader.Read())
-                        {
+                        {                            
                             string errorType = reader["error_type"] as string;
                             string shortDesc = reader["short_desc"] as string;
 
                             string normalizedErrorType = NormalizeErrorType(errorType);
-                            string normalizedDesc = NormalizeErrorType(shortDesc);
+                            string normalizedDesc = NoramlizeShortDesc(shortDesc);
                             string comparisonKey = !string.IsNullOrEmpty(normalizedErrorType) ? normalizedErrorType : normalizedDesc;
 
                             if (categorizedReportData.TryGetValue(comparisonKey, out string desc))
@@ -209,16 +221,20 @@ namespace reportBuilder
                                 if (errorTypeCounts.ContainsKey(desc))
                                 {
                                     errorTypeCounts[desc]++;
+                                    taskAmount++;
                                 }
                                 else
                                 {
                                     errorTypeCounts[desc] = 1;
+                                    taskAmount++;
                                 }
-                            }
+                            }                         
                         }
+                        Console.WriteLine($"Amount of tasks: {taskAmount}");
                     }
                 }
             }
+           
             foreach (var kvp in errorTypeCounts)
             {
                 Console.WriteLine($"Description: {kvp.Key}, Count: {kvp.Value}");

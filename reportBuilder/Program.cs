@@ -234,12 +234,12 @@ namespace reportBuilder
                     }
                 }
             }
-            string credentialsPath = "";
-            string spreadsheetId = "";
+            string credentialsPath = "C:\\Users\\avglushkov\\Downloads\\credentials.json";
+            string spreadsheetId = "1Y_wPVvbCL79Drtc9dyIFctPCFPhTnLhEvRS5Ue3pCfM";
 
             GoogleSheetsService googleSheetsService = new GoogleSheetsService(credentialsPath, spreadsheetId);
 
-            googleSheetsService.InserData(errorTypeCounts);
+            googleSheetsService.InsertData(errorTypeCounts);
         }
     }
 }

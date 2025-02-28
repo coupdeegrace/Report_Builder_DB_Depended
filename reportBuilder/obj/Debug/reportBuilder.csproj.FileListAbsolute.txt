@@ -46,3 +46,17 @@ C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\System.IO
 C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\System.Text.Json.xml
 C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\System.ValueTuple.xml
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Auth.dll
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Core.dll
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.dll
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Sheets.v4.dll
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.pdb
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.xml
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Auth.xml
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Core.pdb
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Core.xml
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Sheets.v4.pdb
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Google.Apis.Sheets.v4.xml
+C:\Users\avglushkov\source\repos\reportBuilder\reportBuilder\bin\Debug\Newtonsoft.Json.xml

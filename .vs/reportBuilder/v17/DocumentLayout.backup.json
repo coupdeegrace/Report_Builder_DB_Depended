@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|solutionrelative:reportbuilder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|c:\\users\\avglushkov\\source\\repos\\reportbuilder\\reportbuilder\\classes\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportbuilder\\classes\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|solutionrelative:reportbuilder\\classes\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,32 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\Program.cs",
+              "RelativeDocumentMoniker": "reportBuilder\\Program.cs",
+              "ToolTip": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\Program.cs",
+              "RelativeToolTip": "reportBuilder\\Program.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAAAOwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T13:51:34.008Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "GoogleSheetsService.cs",
               "DocumentMoniker": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\GoogleSheetsService.cs",
               "RelativeDocumentMoniker": "reportBuilder\\classes\\GoogleSheetsService.cs",
-              "ToolTip": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\GoogleSheetsService.cs*",
-              "RelativeToolTip": "reportBuilder\\classes\\GoogleSheetsService.cs*",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwD0AAAA9AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\GoogleSheetsService.cs",
+              "RelativeToolTip": "reportBuilder\\classes\\GoogleSheetsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T17:48:01.966Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -63,8 +68,7 @@
               "RelativeToolTip": "reportBuilder\\classes\\errorTypeDictionaryClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T11:00:21.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T11:00:21.916Z"
             },
             {
               "$type": "Document",
@@ -76,21 +80,7 @@
               "RelativeToolTip": "reportBuilder\\classes\\ReportClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:00:14.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\Program.cs",
-              "RelativeDocumentMoniker": "reportBuilder\\Program.cs",
-              "ToolTip": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\Program.cs",
-              "RelativeToolTip": "reportBuilder\\Program.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAAAPEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T13:51:34.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:00:14.969Z"
             }
           ]
         }

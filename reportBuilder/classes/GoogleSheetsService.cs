@@ -43,23 +43,41 @@ namespace reportBuilder.classes
             });
         }
 
-        public void InsertData(Dictionary<string, int> data, string range = "Sheet1!A1")
+        public void InsertData(Dictionary<string, int> data, string range = "2 лп ру!B:F")
         {
-            var valueRange = new ValueRange();
+            var requset = _service.Spreadsheets.Values.Get(_spreadsheetId, range);
+            var response = requset.Execute();
+            var values = response.Values;
 
-            var objectList = new List<IList<object>>();
-            foreach (var kvp in data)
+            if (values == null || !values.Any())
             {
-                objectList.Add(new List<object> { kvp.Key, kvp.Value });
+                Console.WriteLine("No data found.");
+                return;
             }
 
-            valueRange.Values = objectList;
+            var updateData = new List<IList<object>>();
 
-            var updateRequest = _service.Spreadsheets.Values.Update(valueRange, _spreadsheetId, range);
+            foreach (var row in values) 
+            {
+                if (row.Count > 0 && row[0] is string description && data.ContainsKey(description))
+                {
+                    var newRow = new List<object>() { data[description] };
+                    updateData.Add(newRow);
+                }
+                else
+                {
+                    updateData.Add(new List<object> { ""});
+                }
+            }
+
+            var updateRange = "2 лп ру!F:F";
+            var updateValueRange = new ValueRange { Values = updateData};
+
+            var updateRequest = _service.Spreadsheets.Values.Update(updateValueRange, _spreadsheetId, updateRange);
             updateRequest.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.RAW;
             updateRequest.Execute();
 
-            Console.WriteLine("Data inserted successfully.");
+            Console.WriteLine("Data updated successfully.");
         }
     }
 }

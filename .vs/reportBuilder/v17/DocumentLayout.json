@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|c:\\users\\avglushkov\\source\\repos\\reportbuilder\\reportbuilder\\classes\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|solutionrelative:reportbuilder\\classes\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportbuilder\\classes\\errortypedictionaryclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|solutionrelative:reportbuilder\\classes\\errortypedictionaryclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,11 +15,7 @@
       "RelativeMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|solutionrelative:reportbuilder\\classes\\reportclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportbuilder\\classes\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|solutionrelative:reportbuilder\\classes\\googlesheetsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|c:\\users\\avglushkov\\source\\repos\\reportbuilder\\reportbuilder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportbuilder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90747709-02FE-4F37-ACDE-5191A1322995}|reportBuilder\\reportBuilder.csproj|solutionrelative:reportbuilder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,25 +42,24 @@
               "RelativeToolTip": "reportBuilder\\Program.cs",
               "ViewState": "AgIAAOIAAAAAAAAAAAAAAOwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T13:51:34.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T13:51:34.008Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GoogleSheetsService.cs",
               "DocumentMoniker": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\GoogleSheetsService.cs",
               "RelativeDocumentMoniker": "reportBuilder\\classes\\GoogleSheetsService.cs",
               "ToolTip": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\GoogleSheetsService.cs",
               "RelativeToolTip": "reportBuilder\\classes\\GoogleSheetsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwDUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T17:48:01.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "errorTypeDictionaryClass.cs",
               "DocumentMoniker": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\errorTypeDictionaryClass.cs",
               "RelativeDocumentMoniker": "reportBuilder\\classes\\errorTypeDictionaryClass.cs",
@@ -68,12 +67,11 @@
               "RelativeToolTip": "reportBuilder\\classes\\errorTypeDictionaryClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T11:00:21.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T11:00:21.916Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ReportClass.cs",
               "DocumentMoniker": "C:\\Users\\avglushkov\\source\\repos\\reportBuilder\\reportBuilder\\classes\\ReportClass.cs",
               "RelativeDocumentMoniker": "reportBuilder\\classes\\ReportClass.cs",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "reportBuilder\\classes\\ReportClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:00:14.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:00:14.969Z"
             }
           ]
         }

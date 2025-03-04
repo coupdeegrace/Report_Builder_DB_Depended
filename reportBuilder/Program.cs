@@ -207,6 +207,8 @@ namespace reportBuilder
                     using (SqlDataReader reader = cmd.ExecuteReader()) 
                     {
                         int taskAmount = 0;
+                        List<string> missingErrorTypes = new List<string>();
+
                         while (reader.Read())
                         {                            
                             string errorType = reader["error_type"] as string;
@@ -228,9 +230,22 @@ namespace reportBuilder
                                     errorTypeCounts[desc] = 1;
                                     taskAmount++;
                                 }
-                            }                         
+                            }
+                            else
+                                missingErrorTypes.Add(comparisonKey);
                         }
+
                         Console.WriteLine($"Amount of tasks: {taskAmount}");
+
+                        if (missingErrorTypes.Count > 0)
+                        {
+                            foreach (var error in missingErrorTypes)
+                            {
+                                Console.WriteLine($"{error} was not found in dictionary");
+                            }
+                        }
+                        else
+                            Console.WriteLine("All error types was found in dictionary. No updates needed");
                     }
                 }
             }

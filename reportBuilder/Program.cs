@@ -214,7 +214,7 @@ namespace reportBuilder
                 }
             }
 
-            string credentialsPath =workspaceConfig.CredentialsPath;
+            string credentialsPath = workspaceConfig.CredentialsPath;
             string spreadsheetId = workspaceConfig.SpreadsheetId;
 
             GoogleSheetsService googleSheetsService = new GoogleSheetsService(credentialsPath, spreadsheetId);

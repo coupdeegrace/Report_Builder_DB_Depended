@@ -43,7 +43,7 @@ namespace reportBuilder.classes
             });
         }
 
-        public void InsertData(Dictionary<string, int> data, string range = "2 лп ру!B:F")
+        public void InsertData(Dictionary<string, int> data, string range, string updateRange)
         {
             var requset = _service.Spreadsheets.Values.Get(_spreadsheetId, range);
             var response = requset.Execute();
@@ -70,7 +70,6 @@ namespace reportBuilder.classes
                 }
             }
 
-            var updateRange = "2 лп ру!F:F";
             var updateValueRange = new ValueRange { Values = updateData};
 
             var updateRequest = _service.Spreadsheets.Values.Update(updateValueRange, _spreadsheetId, updateRange);

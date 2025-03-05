@@ -1,0 +1,7 @@
+{
+	"tableName": "ReportDataRU",
+	"spreadsheetId": "1Y_wPVvbCL79Drtc9dyIFctPCFPhTnLhEvRS5Ue3pCfM",
+	"range": "2 лп ру!B:F",
+	"updateRange": "2 лп ру!F:F",
+	"credentialsPath": "C:\\Users\\avglushkov\\Downloads\\credentials.json"
+}

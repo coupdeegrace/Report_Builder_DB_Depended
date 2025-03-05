@@ -138,6 +138,8 @@
     <Compile Include="classes\errorTypeDictionaryClass.cs" />
     <Compile Include="classes\GoogleSheetsService.cs" />
     <Compile Include="classes\ReportClass.cs" />
+    <Compile Include="classes\WorkspaceConfig.cs" />
+    <Compile Include="classes\WorkspaceConfigManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

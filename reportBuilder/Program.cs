@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.Configuration;
+using System.Management;
 
 namespace reportBuilder
 {
@@ -114,7 +115,8 @@ namespace reportBuilder
             else
                 Console.WriteLine("Workspace name not found in CSV");
 
-            Console.ReadKey();
+            while
+                (Console.ReadKey().Key != ConsoleKey.Escape) { }
         }
 
         //Main logic
@@ -210,10 +212,24 @@ namespace reportBuilder
                         }
                         else
                             Console.WriteLine("All error types was found in dictionary. No updates needed");
+
+                        List<string> uniqueErrors = missingErrorTypes.Select(x => x).Distinct().ToList();
+
+                        if (uniqueErrors.Count != 0)
+                        {
+                            var normalizedErrors = NormalizeUnqoutedCharacters(uniqueErrors);
+                            string errorsToAdd = string.Join("\n", normalizedErrors.ToArray());
+                            File.AppendAllText(dictionaryPath, $"\n{errorsToAdd}", Encoding.UTF8);
+
+                            Console.WriteLine("All errors was add to your dictionary");
+                            Console.WriteLine("Plese add error types to continue");
+                            return;
+                        }                  
                     }
                 }
             }
 
+          
             string credentialsPath = workspaceConfig.CredentialsPath;
             string spreadsheetId = workspaceConfig.SpreadsheetId;
 
@@ -318,6 +334,21 @@ namespace reportBuilder
 
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             string result = regex.Replace(workspaceName, string.Empty.Trim());
+            return result;
+        }
+
+        public static List<string> NormalizeUnqoutedCharacters(List<string> uniqueErrors)
+        {
+            List<string> result = new List<string>();
+            foreach (var error in uniqueErrors)
+            {
+                if (error.Contains("\""))
+                {
+                    result.Add("\"" + error.Replace("\"", "\"\"") + "\";");
+                }
+                else
+                    result.Add(error + ";");
+            }
             return result;
         }
     }
